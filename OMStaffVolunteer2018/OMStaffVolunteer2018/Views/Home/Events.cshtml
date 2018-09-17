@@ -1,0 +1,478 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Admin";
+
+    List<SelectListItem> list = new List<SelectListItem>();
+    SelectListItem one = new SelectListItem() { Text = "Northern Cape", Value = "N" };
+    SelectListItem two = new SelectListItem() { Text = "Easter Cape", Value = "E" };
+    SelectListItem three = new SelectListItem() { Text = "North West", Value = "N" };
+    SelectListItem four = new SelectListItem() { Text = "Free State", Value = "F" };
+    SelectListItem five = new SelectListItem() { Text = "Kwazulu Natal", Value = "K" };
+    SelectListItem six = new SelectListItem() { Text = "Gauteng", Value = "G" };
+    SelectListItem seven = new SelectListItem() { Text = "Mpumlanga", Value = "M" };
+    SelectListItem eight = new SelectListItem() { Text = "Northern Cape", Value = "N" };
+
+    list.Add(one);
+    list.Add(two);
+    list.Add(three);
+    list.Add(four);
+    list.Add(five);
+    list.Add(six);
+    list.Add(seven);
+    list.Add(eight);
+
+}
+
+@*<div style="margin-top:5%">*@
+<div style="margin-top:3%">
+    <div class="row">
+        <div class="col-xs-12 well WellBackground">
+            <div><img style="display:inline;width:25px;width: 33px; margin-left: -11px;margin-top: 21px;" src="@Url.Content("~/Images//Events-icon.png")" alt="events" /> <p style="color:#006150;display:inline;font-weight:900;margin-left:10px;"> Events</p></div>
+            <p style="color:#6eaa24;margin-left:35px;margin-top: -18px;">You have not added any events. The events below are available for sign up.</p>
+            <div>
+                <br />
+                <br />
+                <br />
+
+                <div class="col-xs-12">
+                    <p style="margin-left: 23px;margin-top: -55px;">
+                        You have not added any events. The events below are available for sign up.
+                        You have not added any events. The events below are available for sign up.
+                        You have not added any events. The events below are available for sign up.You have not added any events. The events below are available for sign up.You have not added any events. The events below are available for sign up.
+                    </p>
+                </div>
+
+                @*<div class="col-xs-1"><img style="display:inline;width:30px" src="@Url.Content("~/Images//Events-bottom.png")" /></div>*@
+                <div class="col-xs-12 col-md-6">
+                    <div class="WellHeaderDiv">
+                        <img class="wellHeaderImg" src="@Url.Content("~/Images/Events-bottom.png")" alt="events" /> @*<p class="WellHeaderP">Find Events To Edit</p>*@
+                        @*<p style="color:#6eaa24;">You have not added any events. The events below are available for sign up.</p>*@
+                    </div>
+
+                    <br />
+                    <p style="margin-left: 23px;margin-top: -39px;">
+                        You have not added any events. The events below are available for sign up.
+                        You have not added any events. The events below are available for sign up.
+                    </p>
+                </div>
+
+                @*<div class="col-xs-1"><img style="display:inline;width:30px" src="@Url.Content("~/Images//Events-bottom.png")" /></div>*@
+                <div class="col-xs-12 col-md-6">
+                    <div class="WellHeaderDiv">
+                        <img class="wellHeaderImg" src="@Url.Content("~/Images/Part-of-events.png")" alt="events" /> @*<p class="WellHeaderP">Find Events To Edit</p>*@
+                        @*<p style="color:#6eaa24;">You have not added any events. The events below are available for sign up.</p>*@
+                    </div>
+
+                    @*<img style="display:inline;width:23px" src="@Url.Content("~/Images//Part-of-events.png")" />*@
+                    <p style="margin-left: 23px;margin-top: -39px;">
+                        You have not added any events. The events below are available for sign up.
+                        You have not added any events. The events below are available for sign up.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 well WellBackground">
+            <div class="aligned">
+                <div style="text-align:center">
+                    @Html.Label("Filter on new events:", new { @class = "labels" })
+                    @*@Html.TextBox("Name")*@
+                    @Html.DropDownList("Dropdown", list, "Select a province", new { style = "font-size:15px;width:50%;height: 33px;background-color: #ededed;border-radius: 5px;" })
+                    <br />
+                    <br />
+
+                </div>
+            </div>
+            <span class="btn AdminBtnSearch">Search</span>
+        </div>
+
+        <div class="holder3">
+
+            <button type="button" class="btn btn-primary4">Care and Share</button>
+            <br />
+
+            <div class="col-lg-6" style="padding-left:0;padding-right:0">
+                @*<div style="overflow-y:scroll;height: 443px;width: 441px;">*@
+                <div style="overflow-y:scroll; height: 427px;">
+                    <br />
+
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Robben Island </h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">06:30 am- 10:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a service of cleaning and planting of trees in Robben Island.We will also be taking Thandokulu High School Students to help us out and make sure we have the ...</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+                    @*scroll*@
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Fish Hoek Age Home</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">09:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a service of helping and playing games with the ealdery at Fish Hoek Old Age Home.this day lasting event will be with indoors games and activities</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Gugulethu Primary School</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">12:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a hostdog and cool drinks and jumping castles and spend the day playing games and spending time with special needs learners.We will have a number of activities</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Mowbray Soup Kitchen</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">11:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a hostdog and cool drinks and jumping castles and spend the day playing games and spending time with special needs learners.We will have a number of activities</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+
+                    @*/scroll*@
+
+                </div>
+
+                <div id="expand">
+                    <button type="button" class="btn btn-primary">Expand</button>
+                </div>
+            </div>
+
+
+            @*second*@
+            <button type="button" class="btn btn-primary2">Staff Volunteer Activations</button>
+            @*<br />*@
+
+            <div class="col-lg-6" style="padding-left:0;padding-right:0;margin-top: -20px;">
+                <div style="overflow-y:scroll; height: 427px;">
+                    <br />
+
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Gugulethu Primary School</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">12:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a hostdog and cool drinks and jumping castles and spend the day playing games and spending time with special needs learners.We will have a number of activities</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+
+                    @*scrol*@
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Mowbray Soup Kitchen</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">11:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a hostdog and cool drinks and jumping castles and spend the day playing games and spending time with special needs learners.We will have a number of activities</p>
+                            </div>
+                            </div>
+                            <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+                        </div>
+                    </div>
+
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Gugulethu Primary School</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">12:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a hostdog and cool drinks and jumping castles and spend the day playing games and spending time with special needs learners.We will have a number of activities</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+
+                    @*/scroll*@
+                    <div class="server-action-menu2 col-xs-6">
+                        <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <h1 class="head">Fish Hoek Age Home</h1>
+                            <div class="holder">
+                                <ul>
+                                    <li><b>Venue:</b><p class="detail">4 Main ,Gugulethu South</p></li>
+                                    <li><b>Date:</b><p class="detail">Thursday, 11 April 2018</p></li>
+                                    <li><b>time</b><p class="detail">09:30 am- 16:00 pm</p></li>
+                                </ul>
+                            </div>
+                            <div class="holder2">
+
+                                <h2>Project details:</h2>
+                                <p>We will provide a service of helping and playing games with the ealdery at Fish Hoek Old Age Home.this day lasting event will be with indoors games and activities</p>
+                            </div>
+                        </div>
+
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+               
+                <div id="expand">
+                    <button type="button" class="btn btn-primary">Expand</button>
+                </div>
+            </div>
+        </div>
+        @*<div id="">
+                        <div class="col-md-3 col-xs-12 PaddingLeft single-item>
+                            <div class="server-action-menu">
+                                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                                <div style="color: #006150">
+                                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                                </div>
+                                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-xs-12 PaddingLeft">
+
+                        <div class="server-action-menu">
+                            <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                            <div style="color: #006150">
+                                <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                                <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                                <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                            </div>
+                            <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                        </div>
+                    </div>
+
+                            <div class="col-xs-12 col-md-3 PaddingLeft PaddingRight">
+
+                    <div class="server-action-menu">
+                        <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                        <div style="color: #006150">
+                            <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                            <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                            <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        </div>
+                        <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                    </div>
+                </div>
+                        <div class="col-xs-12 col-md-3 PaddingRight">
+
+                <div class="server-action-menu">
+                    <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                    <div style="color: #006150">
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    </div>
+                    <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+                </div>
+            </div>
+                </div>
+
+            </div>*@
+
+
+        @*<div class="col-xs-12 multiple-items">
+                <div class="server-action-menu" id="align">
+
+                    <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                    <div style="color: #006150">
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    </div>
+                    <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+                </div>
+
+                <div class="server-action-menu slickSpacing">
+
+                    <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                    <div style="color: #006150">
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    </div>
+                    <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+                </div>
+                <div class="server-action-menu slickSpacing">
+
+                    <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                    <div style="color: #006150">
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    </div>
+                    <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+                </div>
+                <div class="server-action-menu slickSpacing">
+
+                    <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                    <div style="color: #006150">
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                        <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    </div>
+                    <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+                </div>
+            </div>*@
+
+        @*<div class="rio-promos">
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <img src="@Url.Content("~/Images//Fish hoek.jpg")" />
+            </div>*@
+    </div>
+</div>
+@*<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>*@
+@section scripts{
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*<script src="~/Scripts/Slick/slick.js"></script>*@
+    @*@Scripts.Render("~/bundles/slick")*@
+    @Styles.Render("~/Content/css")
+    @*<script type="text/javascript">
+            $(document).ready(function () {
+                $('.multiple-items').slick({
+                    dots: false,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1081,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        },
+                        {
+                            breakpoint: 415,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+
+                });
+
+                $('.rio-promos').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    arrows: true,
+                    responsive: [{
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }]
+                });
+
+            });
+        </script>*@
+}

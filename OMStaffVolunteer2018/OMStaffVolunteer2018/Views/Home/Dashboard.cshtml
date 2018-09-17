@@ -1,0 +1,114 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Events";
+}
+
+<div style="margin-top:5%">
+    <div class="row">
+        <div class="col-md-8 col-xs-12 well">
+            <div class="WellHeaderDiv">
+                <img style="margin-left: 12px;" class="wellHeaderImg" src="@Url.Content("~/Images//Events-icon.png")" alt="events" /> <p class="WellHeaderP">Create  a New Event</p>
+                <p style="color:#6eaa24;margin-left: 13px;">You have not added any events. The events below are available for sign up.</p>
+            </div>
+
+            <div class="col-md-4 col-xs-12">
+                <h4>Robben Island</h4>
+                <img class="EventImgSize" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div>
+                    <div style="display:inline;color:#d3d3d3;">
+                        @Html.Label("Venue:")
+                        <span style="font-weight:normal!important">44 Main, Robben Island</span>
+                    </div>
+
+                    <div style="display:inline;color:#d3d3d3;">
+                        @Html.Label("Date:")
+                        <span style="font-weight:normal!important">Tuesday, 5 Aprial 2018</span>
+                    </div>
+
+                    <div style="display:inline;color:#d3d3d3;">
+                        @Html.Label("Time:")
+                        <span style="font-weight:normal!important">06:30 am- 10:00pm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12">
+                <h4>Fish Hoek Old Age home</h4>
+                <img class="EventImgSize" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                @Html.Label("Venue:")
+                <div style="display:inline;color:#d3d3d3;">
+                    <span style="font-weight:normal!important">23 Main, Fish Hoek</span>
+                </div>
+                <br />
+
+                <div style="display:inline;color:#d3d3d3;">
+                    @Html.Label("Date:")
+                    <span style="font-weight:normal!important">Friday, 5 Aprial 2018</span>
+                </div>
+                <br />
+
+                <div style="display:inline;color:#d3d3d3;">
+                    @Html.Label("Time:")
+                    <span style="font-weight:normal!important">09:30 am- 10:00pm</span>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12">
+                <h4>Gugelethu Primary School</h4>
+                <img class="EventImgSize" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="display:inline;color:#d3d3d3;">
+                    @Html.Label("Venue:")
+                    <span style="font-weight:normal!important">4 Main, Gugulethu</span>
+                </div>
+                <br />
+
+                <div style="display:inline;color:#d3d3d3;">
+                    @Html.Label("Date:")
+                    <span style="font-weight:normal!important">Thursday, 5 Aprial 2018</span>
+                </div>
+                <br />
+
+                <div style="display:inline;color:#d3d3d3;">
+                    @Html.Label("Time:")
+                    <span style="font-weight:normal!important">12:30 am- 16:00pm</span>
+                </div>
+                <br />
+                <br />
+
+            </div>
+            <span class="btn orangeBtn">See more</span>
+        </div>
+
+        @*<div class="col-md-3 col-xs-8 well EventRightDiv">
+                <div class="WellHeaderDiv">
+                    <img class="wellHeaderImg" src="@Url.Content("~/Images//Find-events-to-edit.png")" alt="events" /> <p class="WellHeaderP">Nominated a Care & Share Project</p>
+                    <p style="color:#6eaa24;margin-left: 12px;">With the permission of the organisation</p>
+                </div>
+
+                <div>
+                    <img class="EventNomiatedImg" src="@Url.Content("~/Images//PeopleGreen.jpg")" />
+                </div>
+                <span class="btn EventNomiatedBtn">Nominated</span>
+            </div>*@
+
+        <div class="col-md-4 col-xs-12 well">
+            <div class="WellHeaderDiv">
+                <img style="margin-left: 12px;" class="wellHeaderImg" src="@Url.Content("~/Images//Find-events-to-edit.png")" alt="events" /> <p class="WellHeaderP">Nominated a Care & Share Project</p>
+                <p style="color:#6eaa24;margin-left: 43px;">With the permission of the organisation</p>
+            </div>
+
+            <div>
+                <img class="EventNomiatedImg" src="@Url.Content("~/Images//PeopleGreen.jpg")" />
+            </div>
+            <span class="btn EventNomiatedBtn">Nominated</span>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+

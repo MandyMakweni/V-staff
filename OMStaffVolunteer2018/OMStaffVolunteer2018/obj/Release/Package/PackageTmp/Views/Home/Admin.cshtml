@@ -1,0 +1,413 @@
+﻿<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+@{
+    ViewBag.Title = "Home Page";
+
+    List<SelectListItem> list = new List<SelectListItem>();
+    SelectListItem one = new SelectListItem() { Text = "Northern Cape", Value = "N" };
+    SelectListItem two = new SelectListItem() { Text = "Easter Cape", Value = "E" };
+    SelectListItem three = new SelectListItem() { Text = "North West", Value = "N" };
+    SelectListItem four = new SelectListItem() { Text = "Free State", Value = "F" };
+    SelectListItem five = new SelectListItem() { Text = "Kwazulu Natal", Value = "K" };
+    SelectListItem six = new SelectListItem() { Text = "Gauteng", Value = "G" };
+    SelectListItem seven = new SelectListItem() { Text = "Mpumlanga", Value = "M" };
+    SelectListItem eight = new SelectListItem() { Text = "Northern Cape", Value = "N" };
+
+    list.Add(one);
+    list.Add(two);
+    list.Add(three);
+    list.Add(four);
+    list.Add(five);
+    list.Add(six);
+    list.Add(seven);
+    list.Add(eight);
+
+}
+
+<div style="margin-top:5%;">
+    <div class="row">
+        <div class="col-xs-12 well">
+            <div class="WellHeaderDiv">
+                <img style="margin-left: 12px;" class="wellHeaderImg" src="@Url.Content("~/Images/Create-new-event.png")" alt="events" /> <p class="WellHeaderP">Create  a New Event</p>
+                <p style="color:#6eaa24;margin-left: 16px;">You have not added any events. The events below are available for sign up.</p>
+            </div>
+
+            <div class="col-md-5 col-xs-12">
+                <div class="floatingLabel">
+                    @Html.Label("Event Name:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <div class="floatingLabel">
+                    @Html.Label("Venue:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <div class="floatingLabel">
+                    @Html.Label("Date:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <div class="floatingLabel">
+                    @Html.Label("Time:", new { @class = "label1" })
+                    @Html.TextBox("Name","", new { style = "margin-top:-26px;" })
+                </div>
+            </div>
+            <br />
+            <div class="col-md-6 col-xs-12">
+                <div class="styled-input">
+                    <p class="Labletextarea" style="float: left;margin-left: 18px;">@Html.Label("Event Details:")</p>
+                    <form class="Labletextarea">@Html.TextArea("Name", "", new { style = "border-radius: 6px;" })</form>
+                    <br>
+
+                    <div class="col-sm-12" style="margin-bottom:20px;">
+                        <p class="Labletextarea" style="float: left;margin-left: 7px;margin-top: 10px;">@Html.Label("Upload images:")</p>
+                        <div class="btn-bs-file btn btn-sm btn-primary1" style="color:#999;border-color:#ccc; margin-left: 11px;">Browse</div>
+                        <input id="html_btn" type='file' "  />
+                        <span class="max">Max images size 100 kb</span>
+                        @*<div class="btn-bs-file btn btn-sm btn-primary1 btn btn bg-primarys" style="color:#999;border-color:#ccc; margin-left: 11px;">Upload Events</div>
+                            <input id="html_btn" type='file' " />*@
+                        <button class="btn bg-primarys">Upload Events</button>
+                    </div>
+                </div>
+
+                @*<div>
+                     <p class="DisplayInline" style="float:left">@Html.Label("Upload Images:")</p>
+                     <input class="DisplayInline UploadMImg" type="file" /><br />
+                    </div>*@
+                @*<div class="col-md-1 col-xs-12">
+                       <span class="btn bg-primary UploadBtn">Upload Events</span>
+                    </div>*@
+            </div>
+        </div>
+
+        <div class="col-xs-12 well">
+            <div class="WellHeaderDiv">
+                <img style="margin-left: 12px;" class="wellHeaderImg" src="@Url.Content("~/Images/Find-events-to-edit.png")" alt="events" /> <p class="WellHeaderP">Find Events To Edit</p>
+                <p style="color:#6eaa24;margin-left: 13px;">You have not added any events. The events below are available for sign up.</p>
+            </div>
+
+            <div class="col-md-5 col-xs-12">
+                @Html.Label("Select a province:", new { style = "color: #777;font-weight: 900;" })
+                @Html.DropDownList("Dropdown", list, " Western Cape", new { style = "font-size:15px;width:100%;height:33px;background-color:#f3f1f1;border-radius: 5px;color:#999;" })
+                @*@Html.TextBox("Name")*@
+            </div>
+
+            <div class="col-md-5 col-xs-12 floatingLabel">
+                @Html.Label("Title, venue,date:", new { style = "color: #777;font-weight: 900;float:left;margin-top:9px;" })
+                @Html.TextBox("Name", "  Enter text", new { style = "margin-top: 0px;float: left;border-radius: 3px;height: 34px;" })
+            </div>
+            <div class="col-md-2 col-xs-12"><span class="btn bg-primary SearchBtn">Search</span></div>
+        </div>
+
+        <div class="col-md-3 col-xs-12 PaddingLeft">
+            <div class="server-action-menu">
+                <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <br />
+
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-xs-12 PaddingLeft">
+            <div class="server-action-menu">
+                <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <br />
+
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3 PaddingLeft PaddingRight">
+            <div class="server-action-menu">
+                <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <br />
+
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3 PaddingLeft PaddingRight">
+            <div class="server-action-menu">
+                <img style="width:100%" src="@Url.Content("~/Images/Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <br />
+
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+<div class="right">
+    <div class="col-md-5 col-xs-12" style="width:100%;">
+        <select style="border-radius: 5px;height: 34px;background-color:#ffffff;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option selected>4</option>
+            <option>5</option>
+            @*<option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>*@
+        </select>
+
+        @*@Html.DropDownList("Dropdown", list, "4", new { style = "font-size:15px;width:100%;height:33px;background-color:#ffffff;border-radius:5px;color:#000000;" })*@
+    </div>
+</div>
+<p style="float:right;margin-top: 7px;">showing 4 of 20</p>
+
+
+@*<br />
+    <div class="col-lg-6" style="padding-left:0;padding-right:0">
+            <div class="server-action-menu col-xs-6">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+            <div class="server-action-menu col-xs-6">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+        </div>
+    <div class="col-lg-6" style="padding-left:0;padding-right:0">
+            <div class="server-action-menu col-xs-6">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+
+            <div class="server-action-menu col-xs-6">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+
+            </div>
+        </div>
+
+    </div>*@
+
+@*<div class="col-xs-12 col-md-3 PaddingRight">
+        <div class="server-action-menu">
+            <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+            <div style="color: #006150">
+                <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                <span>Venue:</span> <span>44 Main ,Robben Island</span>
+            </div>
+            <br />
+            <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            <br />
+
+        </div>
+    </div>*@
+
+@*<div  style="width:100%">
+            <div class="multiple-items" style="width:50%">
+            <div class="server-action-menu">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+            <div class="server-action-menu" style="margin-left:4px;">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+        </div>
+        <div class=" Index2" style="width:50%">
+            <div class="server-action-menu">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+            <div class="server-action-menu" style="margin-left:4px;">
+                <img style="width:100%" src="@Url.Content("~/Images//Fish hoek.jpg")" />
+                <div style="color: #006150">
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                    <span>Venue:</span> <span>44 Main ,Robben Island</span>
+                </div>
+                <div class="BtnCenter"><span class="btn ImgBtndash">Edit Events</span></div>
+            </div>
+        </div>
+    </div>
+    </div>*@
+
+@*<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>*@
+@section scripts{
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*<script src="~/Scripts/Slick/slick.js"></script>*@
+    @*@Scripts.Render("~/bundles/slick")*@
+    @Styles.Render("~/Content/css")
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            $('.multiple-items').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1081,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 415,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+
+            });
+
+            $('.Index2').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1081,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 415,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+
+            });
+
+        });
+        </script>*@
+    <script>
+        $('.btn-primary1').bind("click", function () {
+            $('#html_btn').click();
+        });
+
+    </script>
+
+}
+

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                   </div>
+            </div>
+        </div>*@
+
+    <div class="navbar navbar-fixed-top">
+        <div class="TopdivGradient body-gradient"></div>
+        <div class="header">
+            <div>
+                <a href="@Url.Action("Index", "Home")" >
+                    <img class="pull-left hidden-xs" style="height: 49px;padding-bottom: 6px;" src="@Url.Content("~/Images/OM-Logo.jpg")" alt="Old Mutual" />
+                </a>
+                    <img class="hidden-sm hidden-md hidden-lg" style="height: 49px;" src="@Url.Content("~/Images/figcon.png")" alt="Old Mutual" />
+                    <img class="pull-right hidden-xs" src="@Url.Content("~/Images/Logo.jpg")" alt="Old Mutual" />        
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" onclick="toggleMenu()">
+                    <span class="icon-bar MobileMuneBtn"></span>
+                    <span class="icon-bar MobileMuneBtn"></span>
+                    <span class="icon-bar MobileMuneBtn"></span>
+                </button>
+            </div>      
+            @*@Html.Partial("_HeaderMenuPartial")*@
+        </div>
+    </div>
+
+    <div id="menubox" class="sidebar" style="color:white">
+        <a href="@Url.Action("Dashboard", "Home")" ><img class="DashboardIcons" src="@Url.Content("~/Images/dashboard-icon.png")" alt="DashBoard" />DASHBOARD</a>
+        <a href="@Url.Action("Events", "Home")" ><img class="DashboardIcons" src="@Url.Content("~/Images/Events.png")" alt="events" />EVENTS</a>
+        <a href="@Url.Action("Nominate", "Home")" ><img class="DashboardIcons" src="@Url.Content("~/Images/Nominate-icon.png")" alt="Nominate" />NOMINATE CARE & SHARE</a>
+        <a href="@Url.Action("Admin", "Home")" ><img class="DashboardIcons" src="@Url.Content("~/Images/Admin-icon.png")" alt="Admin" />ADMIN</a>
+    </div>
+
+ 
+    <div class="container body-content content">
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            <img style="height:32px;margin: 7px;" class="pull-left" src="@Url.Content("~/Images/PureSurvey.png")" alt="DashBoard" />
+            <p style="padding: 20px;margin-top:-10px;" class="pull-right"><span style="color:#1b75bc;">Pure Survey</span>(PTY) Ltd &copy;@DateTime.Now.Year .Right Reserved</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menuBox = document.getElementById('menubox');
+            if (menuBox.style.display == "block") {
+                menuBox.style.display = "none";
+            }
+            else {
+                menuBox.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

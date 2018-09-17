@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Nominate";
+}
+
+<div style="margin-top:5%">
+    <div class="row">
+        <div class="col-xs-12 well WellBackground">
+            <div class="col-md-4 col-xs-12" style="color:#006150;margin-top:10px;">
+                <div class="">
+                    <img style="margin-left: -30px;" class="wellHeaderImg" src="@Url.Content("~/Images//Nominate.png")" alt="events" />  <h4 style="display:inline;">Nominate an Event</h4> 
+                </div>
+
+                <p style="margin-top:8px;">
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-xs-12" style="color:#006150;">
+                <h4>Nominate an Event</h4>
+                <p>
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-xs-12" style="color:#006150;">
+                <h4>Nominate an Event</h4>
+                <p>
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+                <span style="background-color: #6eaa24" class="btn bg-primary">Click here for PDF form</span>
+            </div>
+        </div>
+
+        <div class="col-xs-12 well WellBackground">
+            <div class="col-xs-1 circle" style="margin-top:2.5%"><p style="text-align:center;margin-top:50%;color:white;">Step 1</p></div>
+            <div class="col-xs-11 col-md-5" style="margin-top:2.5%">
+                <h4 style="color:#006150;">Offline Nominations</h4>
+                <p style="color:#006150;">
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-md-5" style="margin-top:2.5%">
+                <div class="floatingLabel">
+                    @Html.Label("Event Name:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <div class="floatingLabel">
+                    @Html.Label("Venue:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <div class="floatingLabel">
+                    @Html.Label("Date:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <div class="floatingLabel">
+                    @Html.Label("Time:", new { @class = "label1" })
+                    @Html.TextBox("Name", "", new { style = "margin-top:-26px;" })
+                </div>
+
+                <br />
+                <span style="background-color: #6eaa24" class="btn bg-primary pull-right">Save & Conitinue</span>
+            </div>
+        </div>
+
+        <div class="col-xs-12 well WellBackground">
+            <div class="col-md-3 col-xs-12">
+                <h4 style="color: #6eaa24">My Nominated &Aacute; Share Project</h4>
+                <p style="color:#006150;">
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+
+            <div class="col-md-3 col-xs-12">
+                <h4 style="color: #6eaa24">My Drafts</h4>
+                <p style="color:#006150;">
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+
+            <div class="col-md-3 col-xs-12">
+                <h4 style="color: #6eaa24">My Upcoming Events</h4>
+                <p style="color:#006150;">
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+
+            <div class="col-md-3 col-xs-12">
+                <h4 style="color: #6eaa24">My CDompleted Events</h4>
+                <p style="color:#006150;">
+                    You have not added any events. The events below are available for sign up.
+                    You have not added any events. The events below are available for sign up.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
